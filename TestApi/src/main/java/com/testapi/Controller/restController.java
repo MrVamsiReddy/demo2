@@ -19,7 +19,9 @@ public class restController {
 	@GetMapping("/get/{id}")
 	public ResponseEntity<api> getbyid(@PathVariable("id") long id){
 		api getusingid = service.getusingid(id);
+		System.out.println("hello");
 		return new ResponseEntity<>(getusingid,HttpStatus.OK);
+		
 	}
 
 }
